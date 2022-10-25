@@ -71,6 +71,10 @@ export class ThreeBase {
         Number(sizes.viewport.width),
         Number(sizes.viewport.height)
       );
+      this.composer.setSize(
+        Number(sizes.viewport.width),
+        Number(sizes.viewport.height)
+      );
       this.CSS2Render.setSize(
         Number(sizes.viewport.width),
         Number(sizes.viewport.height)
