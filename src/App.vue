@@ -22,8 +22,9 @@ nav {
   padding: 30px;
 
   a {
+    display: block;
     font-weight: bold;
-    color: #2c3e50;
+    color: #fff;
 
     &.router-link-exact-active {
       color: #42b983;
