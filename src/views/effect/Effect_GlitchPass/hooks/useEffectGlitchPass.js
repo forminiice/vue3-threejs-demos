@@ -29,7 +29,7 @@ export const useEffectGlitchPass = (element) => {
   };
 
   const loadTools = (threeBase) => {
-    threeBase.addAxesHelper(10000, 10000);
+    threeBase.addAxesHelper(10000);
     threeBase.addStats();
   };
 
