@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/Effect_GlitchPass">Effect_GlitchPass</router-link>
+    <!-- <router-link to="/about">About</router-link> -->
   </nav>
   <router-view />
 </template>
@@ -16,6 +16,9 @@ body {
 }
 nav {
   position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999;
   padding: 30px;
 
   a {

@@ -4,7 +4,12 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/HomeView.vue"),
+    redirect: "/Effect_GlitchPass",
+  },
+  {
+    path: "/Effect_GlitchPass",
+    name: "Effect_GlitchPass",
+    component: () => import("@/views/effect/Effect_GlitchPass"),
   },
 ];
 
