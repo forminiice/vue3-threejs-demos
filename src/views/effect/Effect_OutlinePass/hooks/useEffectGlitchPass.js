@@ -23,7 +23,10 @@ export const useEffectGlitchPass = (element) => {
 
   const loadEffect = (threeBase) => {
     const outlinePass = new OutlinePass(
-      new THREE.Vector2(element.offsetWidth, element.offsetHeight),
+      new THREE.Vector2(
+        threeBase.sizes.viewport.width,
+        threeBase.sizes.viewport.height
+      ),
       threeBase.scene,
       threeBase.camera
     );
