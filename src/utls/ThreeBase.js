@@ -6,6 +6,7 @@ import { CSS2DRenderer } from "three/examples/jsm/renderers/CSS2DRenderer";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import Sizes from "./Size";
 export class ThreeBase {
   constructor(element) {
     this.element = element;
@@ -15,6 +16,7 @@ export class ThreeBase {
     this.renderer = this.initRenderer();
     this.composer = this.initComposer();
     this.control = this.initControl();
+    this.sizes = this.initSize();
     this.mixers = [];
     this.clock = new THREE.Clock();
     this.renderMixins = [];
@@ -61,6 +63,23 @@ export class ThreeBase {
     control.target = new THREE.Vector3(0, 0, 0);
     control.update();
     return control;
+  }
+  initSize() {
+    const sizes = new Sizes({ dom: this.element });
+    sizes.onResize("resizeRender", () => {
+      this.renderer.setSize(
+        Number(sizes.viewport.width),
+        Number(sizes.viewport.height)
+      );
+      this.CSS2Render.setSize(
+        Number(sizes.viewport.width),
+        Number(sizes.viewport.height)
+      );
+      this.camera.aspect =
+        Number(sizes.viewport.width) / Number(sizes.viewport.height);
+      this.camera.updateProjectionMatrix();
+    });
+    return sizes;
   }
   addStats() {
     this.stats = new Stats();
