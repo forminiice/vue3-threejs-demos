@@ -3,7 +3,6 @@ import { onMounted } from "vue";
 import * as THREE from "three";
 import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
 import { GammaCorrectionShader } from "three/examples/jsm/shaders/GammaCorrectionShader";
-
 import { GlitchPass } from "three/examples/jsm/postprocessing/GlitchPass.js";
 
 import { ThreeBase } from "@/utls/ThreeBase";
