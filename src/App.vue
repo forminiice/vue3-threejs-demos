@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/Effect_GlitchPass">Effect_GlitchPass</router-link>
-    <!-- <router-link to="/about">About</router-link> -->
+    <router-link to="/Effect_OutlinePass">Effect_OutlinePass</router-link>
   </nav>
   <router-view />
 </template>

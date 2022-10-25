@@ -11,6 +11,11 @@ const routes = [
     name: "Effect_GlitchPass",
     component: () => import("@/views/effect/Effect_GlitchPass"),
   },
+  {
+    path: "/Effect_OutlinePass",
+    name: "Effect_OutlinePass",
+    component: () => import("@/views/effect/Effect_OutlinePass"),
+  },
 ];
 
 const router = createRouter({
