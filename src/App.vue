@@ -1,19 +1,37 @@
 <template>
   <nav>
-    <router-link to="/Effect_GlitchPass">Effect_GlitchPass</router-link>
-    <router-link to="/Effect_OutlinePass">Effect_OutlinePass</router-link>
+    <router-link
+      v-for="(route, index) in routers"
+      :key="index"
+      :to="route.path"
+    >
+      {{ route.name }}
+    </router-link>
   </nav>
   <router-view />
 </template>
+
+<script setup>
+import { useRouter } from "vue-router";
+
+const Router = useRouter();
+const routers = Router.options.routes.filter((route) => {
+  if (route.name !== "home") {
+    return route;
+  }
+});
+</script>
 
 <style lang="scss">
 body {
   margin: 0;
 }
+
 #app {
   width: 100vw;
   height: 100vh;
 }
+
 nav {
   position: absolute;
   right: 0;
