@@ -16,6 +16,11 @@ const routes = [
     name: "Effect_OutlinePass",
     component: () => import("@/views/effect/Effect_OutlinePass"),
   },
+  {
+    path: "/Shader_Shadertoy",
+    name: "Shader_Shadertoy",
+    component: () => import("@/views/shader/Shader_Shadertoy"),
+  },
 ];
 
 const router = createRouter({

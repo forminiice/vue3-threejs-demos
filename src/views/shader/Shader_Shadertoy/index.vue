@@ -5,7 +5,10 @@
 <script setup>
 import { ref } from "vue";
 
-import { useEffectGlitchPass } from "./hooks/useEffectOutlinePass";
+// 手动转换
+// import { useEffectGlitchPass } from "./hooks/useShadertoy1";
+// 使用 three-shadertoy-material npm包 直接使用shadertoy中的着色器生成材质
+import { useEffectGlitchPass } from "./hooks/useShadertoy2";
 
 const webglEl = ref();
 
